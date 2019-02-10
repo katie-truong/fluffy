@@ -16,12 +16,10 @@ class NameForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    axios.post('/user', {
-      user: this.state.value
-    })
-    .then((response) => {
-      console.log(response)
+    // alert('A name was submitted: ' + this.state.value);
+    axios.get(`/user?username=${this.state.value}`)
+    .then((res) => {
+      console.log('Successfully submitted: ', res)
     })
     .catch((error)=> {
       console.log(error)
