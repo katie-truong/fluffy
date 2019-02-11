@@ -5,7 +5,10 @@ import axios from 'axios';
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      value: '',
+      response: ''
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,7 +22,7 @@ class NameForm extends React.Component {
     // alert('A name was submitted: ' + this.state.value);
     axios.get(`/user?username=${this.state.value}`)
     .then((res) => {
-      console.log('Successfully submitted: ', res)
+      this.props.onGettingData(res)
     })
     .catch((error)=> {
       console.log(error)
