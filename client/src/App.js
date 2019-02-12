@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div>
         <NameForm onGettingData={this.getResponse}/>
-        <Profile res={this.state.responses}/>
+        <Profile res={this.state.response}/>
       </div>
     );
   }

@@ -8,7 +8,9 @@ class Profile extends React.Component {
   render() {
     if (this.props.res) {
       return(
-        <div>{this.props.res.map(item => <li key={item.id}>{item.subreddit}</li>)}</div>
+        <div>
+          <div>{this.props.res.map(item => <div key={item.id}>{item.body}</div>)}</div>
+        </div>
       )
     } else {
       return null
