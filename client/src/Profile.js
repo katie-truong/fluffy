@@ -1,21 +1,14 @@
 import React from 'react';
+import FrequentSubs from './FrequentSubs.js'
+// import WordCloud from './WordCloud.js'
 
-class Profile extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    if (this.props.res) {
-      return(
-        <div>
-          <div>{this.props.res.map(item => <div key={item.id}>{item.body}</div>)}</div>
-        </div>
-      )
-    } else {
-      return null
-    }
-  }
+const Profile = ({res}) => {
+  return (
+    <div>
+      <FrequentSubs res={res}/>
+      {/* <WordCloud res={res}/> */}
+    </div>
+  )
 }
 
 export default Profile;

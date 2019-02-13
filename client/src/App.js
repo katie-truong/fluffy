@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NameForm from './NameForm.js';
-import Profile from './Profile.js'
+import Profile from './Profile.js';
 import './App.css';
 
 class App extends Component {

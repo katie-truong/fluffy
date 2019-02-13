@@ -16,7 +16,6 @@ router.get('/',(req,res) => {
   r.getUser(req.query.username).getOverview().then(res.json.bind(res))
 });
 
-
 module.exports = router;
 
 // snoo.getUser('orionchocopie').getOverview().then(console.log)
