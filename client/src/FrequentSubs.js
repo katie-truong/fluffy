@@ -3,6 +3,9 @@ import React from 'react';
 class FrequentSubs extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      countObj: {}
+    }
   }
 
   render() {
@@ -26,12 +29,16 @@ class FrequentSubs extends React.Component {
         }
       }
       console.log(countObj)
+      return (
+        <div>
+          Data
+        </div>
+      )
+    } else {
+      return (
+        <div></div>
+      )
     }
-    return (
-      <div>
-        
-      </div>
-    )
   }
 }
 
